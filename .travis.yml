@@ -6,4 +6,4 @@ before_install:
   - docker build -t byz96/docker-react -f Dockerfile.dev .
 
 script:
-  - docker -e CI=true run byz96/docker-react npm run test 
+  - docker run byz96/docker-react npm run test -- --coverage 
